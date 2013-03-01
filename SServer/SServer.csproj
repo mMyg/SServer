@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8C7C702B-10CE-4BA0-9F84-771B59A32899}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SServer</RootNamespace>
+    <AssemblyName>SServer</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>SServer.Main.EntryPoint</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Database\Overlays.cs" />
+    <Compile Include="Database\Scenarios.cs" />
+    <Compile Include="Database\Templates.cs" />
+    <Compile Include="Database\Terrains.cs" />
+    <Compile Include="Enums\Building.cs" />
+    <Compile Include="Enums\Fx.cs" />
+    <Compile Include="Enums\Behaviour.cs" />
+    <Compile Include="Enums\Voices.cs" />
+    <Compile Include="Enums\Event.cs" />
+    <Compile Include="Enums\Internal.cs" />
+    <Compile Include="Enums\House.cs" />
+    <Compile Include="Enums\Action.cs" />
+    <Compile Include="Enums\Films.cs" />
+    <Compile Include="Enums\Music.cs" />
+    <Compile Include="Enums\Overlay.cs" />
+    <Compile Include="Enums\RadioMessage.cs" />
+    <Compile Include="Enums\Responce.cs" />
+    <Compile Include="Enums\Scenario.cs" />
+    <Compile Include="Enums\ServerPriority.cs" />
+    <Compile Include="Enums\Sound.cs" />
+    <Compile Include="Enums\Template.cs" />
+    <Compile Include="Enums\Infantry.cs" />
+    <Compile Include="Enums\Terrain.cs" />
+    <Compile Include="Enums\Theater.cs" />
+    <Compile Include="Enums\Vehicle.cs" />
+    <Compile Include="Enums\Weapon.cs" />
+    <Compile Include="Environment\Variables.cs" />
+    <Compile Include="Interfaces\ICell.cs" />
+    <Compile Include="Interfaces\IClient.cs" />
+    <Compile Include="Interfaces\IMap.cs" />
+    <Compile Include="Interfaces\IGame.cs" />
+    <Compile Include="Interfaces\IServer.cs" />
+    <Compile Include="Interfaces\IThread.cs" />
+    <Compile Include="Interfaces\IUnit.cs" />
+    <Compile Include="IO\MixFile.cs" />
+    <Compile Include="IO\NetworkQueue.cs" />
+    <Compile Include="IO\Bytes.cs" />
+    <Compile Include="IO\PaletteFile.cs" />
+    <Compile Include="IO\TemplateTileFile.cs" />
+    <Compile Include="Main\EntryPoint.cs" />
+    <Compile Include="Objects\Display.cs" />
+    <Compile Include="Objects\Overlay.cs" />
+    <Compile Include="Objects\Template.cs" />
+    <Compile Include="IO\TemplateFile.cs" />
+    <Compile Include="Objects\Waypoint.cs" />
+    <Compile Include="Packets\ClientInfo.cs" />
+    <Compile Include="Packets\ClientMessage.cs" />
+    <Compile Include="Packets\GameClientStatus.cs" />
+    <Compile Include="Packets\GameDisconnectClient.cs" />
+    <Compile Include="Packets\GamePacketSix.cs" />
+    <Compile Include="Packets\GameInfo.cs" />
+    <Compile Include="Packets\GameStateData.cs" />
+    <Compile Include="Packets\GameStateEnd.cs" />
+    <Compile Include="Packets\GameStateInit.cs" />
+    <Compile Include="Packets\GameClientList.cs" />
+    <Compile Include="Packets\SSPacket.cs" />
+    <Compile Include="Objects\Cell.cs" />
+    <Compile Include="Objects\Game.cs" />
+    <Compile Include="IO\IniFile.cs" />
+    <Compile Include="Database\Infantries.cs" />
+    <Compile Include="Objects\Infantry.cs" />
+    <Compile Include="Objects\Scenario.cs" />
+    <Compile Include="Database\Vehicles.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Objects\Server.cs" />
+    <Compile Include="Objects\Settings.cs" />
+    <Compile Include="Objects\Unit.cs" />
+    <Compile Include="Structs\ClientCommand.cs" />
+    <Compile Include="Structs\ClientMessage.cs" />
+    <Compile Include="Structs\ClientMission.cs" />
+    <Compile Include="Structs\FireWeaponTo.cs" />
+    <Compile Include="Structs\MoveTo.cs" />
+    <Compile Include="Structs\SlotInfo.cs" />
+    <Compile Include="Structs\UnitInfo.cs" />
+    <Compile Include="Objects\Terrain.cs" />
+    <Compile Include="Objects\Vehicle.cs" />
+    <Compile Include="Structs\PickupCrate.cs" />
+    <Compile Include="Structs\PlaceOverlay.cs" />
+    <Compile Include="Structs\SetSpecialAttributes.cs" />
+    <Compile Include="Structs\FaceTo.cs" />
+    <Compile Include="Structs\SetHealth.cs" />
+    <Compile Include="Structs\Select.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="desert.mix">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Server.ini">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="SOLEDISK.MIX">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="temperat.mix">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="winter.mix">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
